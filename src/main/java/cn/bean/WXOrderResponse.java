@@ -1,4 +1,4 @@
-package cn;
+package cn.bean;
 
 /**
  * 返回前端实体

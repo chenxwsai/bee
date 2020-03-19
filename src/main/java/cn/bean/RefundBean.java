@@ -1,4 +1,4 @@
-package cn;
+package cn.bean;
 
 import java.util.Date;
 

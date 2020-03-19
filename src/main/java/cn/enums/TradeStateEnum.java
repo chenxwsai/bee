@@ -1,4 +1,4 @@
-package cn;
+package cn.enums;
 
 public enum TradeStateEnum {
 	SUCCESS("SUCCESS", "支付成功"),

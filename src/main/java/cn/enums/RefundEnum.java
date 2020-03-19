@@ -1,4 +1,4 @@
-package cn;
+package cn.enums;
 
 /**退款状态
  * @author guoxs

@@ -1,4 +1,4 @@
-package cn;
+package cn.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -8,6 +8,9 @@ import java.util.Map;
 
 import com.github.wxpay.sdk.WXPay;
 import com.github.wxpay.sdk.WXPayUtil;
+
+import cn.bean.WXOrderResponse;
+import cn.enums.TradTypeEnum;
 
 /**
  * 支付模块入口

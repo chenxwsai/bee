@@ -1,10 +1,14 @@
-package cn;
+package cn.job;
 
 import java.util.ArrayList;
 
 import javax.annotation.Resource;
 
 import com.github.wxpay.sdk.WXPayConstants;
+
+import cn.bean.WXOrderResponse;
+import cn.enums.TradeStateEnum;
+import cn.util.MWXPayUtil;
 
 public class PayJob {
 	@Resource

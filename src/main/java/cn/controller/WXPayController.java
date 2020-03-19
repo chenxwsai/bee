@@ -1,4 +1,4 @@
-package cn;
+package cn.controller;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -16,6 +16,12 @@ import javax.annotation.Resource;
 import com.github.wxpay.sdk.WXPay;
 import com.github.wxpay.sdk.WXPayConstants;
 import com.github.wxpay.sdk.WXPayUtil;
+
+import cn.bean.RefundBean;
+import cn.bean.WXOrderResponse;
+import cn.enums.RefundEnum;
+import cn.util.AESUtil;
+import cn.util.MWXPayUtil;
 
 /**
  * 回调入口
@@ -263,6 +269,10 @@ public class WXPayController extends BaseController {
 		try {
 			// 获取订单信息，金额
 			double money = 0d;
+			
+			if(money <=0){
+				return error("不可退款");
+			}
 
 			// 新建退款申请单
 			RefundBean refundBean = new RefundBean();

@@ -1,4 +1,4 @@
-package cn;
+package cn.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -8,6 +8,7 @@ import java.io.InputStream;
 
 import com.github.wxpay.sdk.IWXPayDomain;
 import com.github.wxpay.sdk.WXPayConfig;
+import com.github.wxpay.sdk.WXPayConstants;
 
 public class WXPayConfigImpl extends WXPayConfig {
     private byte[] certData;
@@ -59,10 +60,10 @@ public class WXPayConfigImpl extends WXPayConfig {
     }
 
     public String getPrimaryDomain() {
-        return "api.mch.weixin.qq.com";
+        return WXPayConstants.DOMAIN_API;
     }
 
     public String getAlternateDomain() {
-        return "api2.mch.weixin.qq.com";
+        return WXPayConstants.DOMAIN_API2;
     }
 }
