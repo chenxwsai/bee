@@ -44,7 +44,7 @@ public class MWXPayUtil {
 	 * @return 返回整理的数据模型
 	 */
 	public WXOrderResponse order(String orderNo, Integer amount, String describe, String UserIp, String orderType) {
-		HashMap<String, String> data = new HashMap<>();
+		HashMap<String, String> data = new HashMap<String, String>();
 		data.put("body", describe);
 		data.put("out_trade_no", orderNo);
 		// data.put("device_info", "");//调用接口提交的终端设备号
@@ -84,7 +84,7 @@ public class MWXPayUtil {
 	 * @return 返回整理的数据模型
 	 */
 	public WXOrderResponse rePay(String orderNo, Integer amount, String describe, String UserIp, String orderType) {
-		HashMap<String, String> data = new HashMap<>();
+		HashMap<String, String> data = new HashMap<String, String>();
 		data.put("check_name", "FORCE_CHECK");// NO_CHECK：不校验真实姓名
 												// FORCE_CHECK：强校验真实姓名
 		/**
@@ -136,7 +136,7 @@ public class MWXPayUtil {
 	 */
 	public Map<String, String> doRefund(String orderNo, String refundId, Integer totalAmount, Integer refundAmount)
 			throws Exception {
-		HashMap<String, String> data = new HashMap<>();
+		HashMap<String, String> data = new HashMap<String, String>();
 		data.put("out_trade_no", orderNo);
 		data.put("out_refund_no", refundId);
 
@@ -156,7 +156,7 @@ public class MWXPayUtil {
 	}
 
 	public Map<String, String> getWithdrawBankMap(String orderNo) throws Exception {
-		Map<String, String> data = new HashMap<>();
+		Map<String, String> data = new HashMap<String, String>();
 		return data;
 	}
 
@@ -228,7 +228,7 @@ public class MWXPayUtil {
 	 */
 	public Map<String, String> closeOrder(String orderNo) {
 		System.out.println("关闭订单");
-		HashMap<String, String> data = new HashMap<>();
+		HashMap<String, String> data = new HashMap<String, String>();
 		data.put("out_trade_no", orderNo);
 		try {
 			Map<String, String> r = wxpay.closeOrder(data);
@@ -266,7 +266,7 @@ public class MWXPayUtil {
 		// 坑！！！！！！！！！！
 		// sgin（签名），不是拿微信返回的sgin，而是自己再签一次，返回给客户端
 		// 注意：key不能是大写
-		Map<String, String> params = new HashMap<>();
+		Map<String, String> params = new HashMap<String, String>();
 		params.put("appid", config.getAppID());
 		params.put("partnerid", config.getMchID());
 		params.put("prepayid", map.get("prepay_id"));

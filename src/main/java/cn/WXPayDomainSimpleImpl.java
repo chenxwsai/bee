@@ -21,7 +21,6 @@ public class WXPayDomainSimpleImpl implements IWXPayDomain {
         return WxpayDomainHolder.holder;
     }
 
-    @Override
     public synchronized void report(final String domain, long elapsedTimeMillis, final Exception ex) {
         DomainStatics info = domainData.get(domain);
         if(info == null){
@@ -46,7 +45,6 @@ public class WXPayDomainSimpleImpl implements IWXPayDomain {
             ++info.otherErrorCount;
         }
     }
-    @Override
     public synchronized DomainInfo getDomain(final WXPayConfig config) {
         DomainStatics primaryDomain = domainData.get(WXPayConstants.DOMAIN_API);
         if(primaryDomain == null ||
