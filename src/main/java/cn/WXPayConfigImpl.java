@@ -14,7 +14,6 @@ public class WXPayConfigImpl extends WXPayConfig {
     private static WXPayConfigImpl INSTANCE;
 
     public final static String NOTIFY_URL = "http://***/wx-pay/callback";
-//    public final static String NOTIFY_URL = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 
     private WXPayConfigImpl() throws Exception {
         //获取证书
